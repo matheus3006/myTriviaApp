@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "myTriviaApp",
+    "slug": "myTriviaApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
