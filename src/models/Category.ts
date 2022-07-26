@@ -1,16 +1,12 @@
-export interface ICategory {
-  "Arts & Literature" : [Tags]
-  "Film & TV": [Tags]
-  "Food & Drink": [Tags]
-  "General Knowledge": [Tags]
-  "Geography": [Tags]
-  "History": [Tags]
-  "Music": [Tags]
-  "Science": [Tags]
-  "Society & Culture": [Tags]
-  "Sport & Leisure": [Tags]
-}
-
-interface Tags{
-  [propName: string]: string;
+export enum ICategory {
+  artsAndLiterature = 'Arts & Literature',
+  filmAndTv = 'Film & TV',
+  foodAndDrink = 'Food & Drink',
+  generalKnowledge = 'General Knowledge',
+  geography = 'Geography',
+  history = 'History',
+  music = 'Music',
+  science = 'Science',
+  societyAndCulture = 'Society & Culture',
+  sportAndLeisure = 'Sport & Leisure',
 }
