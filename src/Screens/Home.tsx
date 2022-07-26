@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { Button, Center, Text, VStack } from 'native-base';
 import { useState } from 'react';
 import { api } from '../config/Axios/globalConfig';
@@ -6,6 +7,7 @@ import { ICategory } from '../models/Category';
 import { IQuestions } from '../models/Question';
 
 export function Home() {
+  const navigation = useNavigation();
   const [questions, setQuestions] = useState<IQuestions[]>([
     {
       category: 'Food & Drink',
@@ -29,10 +31,13 @@ export function Home() {
   };
 
   const handleGetCategories = async () => {
-    const response = await api.get('https://the-trivia-api.com/api/categories');
+    //to be implemented
 
-    setCategory(response.data);
   };
+
+  const handleNewGame = ()=>{
+    navigation.navigate(`newGame`)
+  }
 
   return (
     <Center flex={1}>
@@ -42,13 +47,11 @@ export function Home() {
           size="md"
           onPress={() => {
             handleGetQuestions();
-            handleGetCategories();
           }}
         >
           Get started
         </Button>
-        <Text paddingTop={20}>{category[0]} </Text>
-        <Text paddingTop={20}>{questions[0].question}</Text>
+
       </VStack>
     </Center>
   );
