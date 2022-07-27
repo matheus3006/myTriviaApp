@@ -47,6 +47,7 @@ export function Home() {
           size="md"
           onPress={() => {
             handleGetQuestions();
+            handleNewGame()
           }}
         >
           Get started
