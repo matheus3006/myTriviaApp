@@ -9,6 +9,7 @@ export const AppRoutes = () => {
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="home" component={Home} />
       <Screen name="newGame" component={NewGame} />
+
     </Navigator>
   )
 }
